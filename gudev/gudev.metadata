@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<metadata>
+  <attr path="/api/namespace/object/constructor[@cname='g_udev_client_new']/parameters/parameter" name="type">GStrv</attr>
+  <attr path="/api/namespace/object/method[@cname='g_udev_device_get_property_keys']/return-type" name="type">GStrv</attr>
+  <attr path="/api/namespace/object/method[@cname='g_udev_device_get_property_as_strv']/return-type" name="type">GStrv</attr>
+  <attr path="/api/namespace/object/method[@cname='g_udev_device_get_sysfs_attr_as_strv']/return-type" name="type">GStrv</attr>
+</metadata>

@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+Libraries=${libdir}/mono/gudev-sharp-1.0/gudev-sharp.dll
+
+Name: GUdev#
+Description: GUdev# - A Gtk# GUdev binding
+Version: @VERSION@
+Requires: glib-sharp-2.0
+Libs: -r:${Libraries}

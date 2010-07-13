@@ -1,0 +1,9 @@
+<gapi-parser-input>
+  <api filename="../gudev/gudev-api.raw">
+    <library name="gudev-sharp.dll">
+      <namespace name="GUdev">
+	<dir>udev-151/extras/gudev/</dir>
+      </namespace>
+    </library>
+  </api>
+</gapi-parser-input>

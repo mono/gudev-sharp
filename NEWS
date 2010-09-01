@@ -1,0 +1,7 @@
+GUdev#
+A mono binding to libgudev.
+
+=============
+Version 0.1
+=============
+Initial binding of libgudev.

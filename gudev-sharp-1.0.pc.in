@@ -6,5 +6,5 @@ Libraries=${libdir}/mono/gudev-sharp-1.0/gudev-sharp.dll
 Name: GUdev#
 Description: GUdev# - A Gtk# GUdev binding
 Version: @VERSION@
-Requires: glib-sharp-2.0
+Requires: glib-sharp-3.0
 Libs: -r:${Libraries}

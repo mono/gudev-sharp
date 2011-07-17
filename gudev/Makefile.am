@@ -5,8 +5,8 @@ METADATA=gudev.metadata
 ASSEMBLY_NAME= gudev-sharp
 ASSEMBLY= $(ASSEMBLY_NAME).dll
 
-CODEGEN=gapi2-codegen
-FIXUP=gapi2-fixup
+CODEGEN=gapi3-codegen
+FIXUP=gapi3-fixup
 
 sources = 
 

@@ -6,5 +6,12 @@ autom4te.cache/
 config.*
 configure
 install-sh
+generated/
+generated-stamp
 missing
+gudev/gudev-sharp.snk
+AssemblyInfo.cs
+*-api.xml
+*.dll
+*.dll.config
 *.pc

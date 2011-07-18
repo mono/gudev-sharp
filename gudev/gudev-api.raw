@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<api>
+<api parser_version="2">
   <!--
 
         This file was automatically generated.
@@ -13,16 +13,51 @@
       <member cname="G_UDEV_DEVICE_TYPE_CHAR" name="Char" value="'c'" />
     </enum>
     <object name="Client" cname="GUdevClient" parent="GObject">
+      <class_struct cname="GUdevClientClass">
+        <field name="ParentClass" cname="parent_class" type="GObjectClass" />
+        <method signal_vm="uevent" />
+        <method vm="reserved1" />
+        <method vm="reserved2" />
+        <method vm="reserved3" />
+        <method vm="reserved4" />
+        <method vm="reserved5" />
+        <method vm="reserved6" />
+        <method vm="reserved7" />
+        <method vm="reserved8" />
+      </class_struct>
       <field name="Priv" cname="priv" type="GUdevClientPrivate*" />
       <property name="Subsystems" cname="subsystems" type="GStrv" readable="true" writeable="true" construct-only="true" />
       <signal name="Uevent" cname="uevent" when="LAST" field_name="uevent">
         <return-type type="void" />
         <parameters>
-          <parameter type="GUdevClient*" name="client" />
           <parameter type="const-gchar*" name="action" />
           <parameter type="GUdevDevice*" name="device" />
         </parameters>
       </signal>
+      <virtual_method name="Reserved1" cname="reserved1" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
+      <virtual_method name="Reserved2" cname="reserved2" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
+      <virtual_method name="Reserved3" cname="reserved3" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
+      <virtual_method name="Reserved4" cname="reserved4" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
+      <virtual_method name="Reserved5" cname="reserved5" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
+      <virtual_method name="Reserved6" cname="reserved6" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
+      <virtual_method name="Reserved7" cname="reserved7" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
+      <virtual_method name="Reserved8" cname="reserved8" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
       <method name="GetType" cname="g_udev_client_get_type" shared="true">
         <return-type type="GType" />
       </method>
@@ -65,7 +100,42 @@
       </method>
     </object>
     <object name="Device" cname="GUdevDevice" parent="GObject">
+      <class_struct cname="GUdevDeviceClass">
+        <field name="ParentClass" cname="parent_class" type="GObjectClass" />
+        <method vm="reserved1" />
+        <method vm="reserved2" />
+        <method vm="reserved3" />
+        <method vm="reserved4" />
+        <method vm="reserved5" />
+        <method vm="reserved6" />
+        <method vm="reserved7" />
+        <method vm="reserved8" />
+      </class_struct>
       <field name="Priv" cname="priv" type="GUdevDevicePrivate*" />
+      <virtual_method name="Reserved1" cname="reserved1" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
+      <virtual_method name="Reserved2" cname="reserved2" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
+      <virtual_method name="Reserved3" cname="reserved3" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
+      <virtual_method name="Reserved4" cname="reserved4" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
+      <virtual_method name="Reserved5" cname="reserved5" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
+      <virtual_method name="Reserved6" cname="reserved6" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
+      <virtual_method name="Reserved7" cname="reserved7" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
+      <virtual_method name="Reserved8" cname="reserved8" shared="true" padding="true">
+        <return-type type="void" />
+      </virtual_method>
       <method name="GetAction" cname="g_udev_device_get_action">
         <return-type type="const-gchar*" />
       </method>

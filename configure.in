@@ -70,5 +70,5 @@ Makefile
 gudev/gudev-sharp.dll.config
 gudev/Makefile
 gudev/AssemblyInfo.cs
-gudev-sharp-1.0.pc
+gudev-sharp-3.0.pc
 ])

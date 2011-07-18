@@ -20,7 +20,7 @@ DISTCLEANFILES= AssemblyInfo.cs
 
 noinst_DATA = gudev-sharp.dll
 
-moduledir = $(prefix)/lib/mono/gudev-sharp-1.0/
+moduledir = $(prefix)/lib/mono/gudev-sharp-3.0/
 module_SCRIPTS = gudev-sharp.dll.config
 
 all: generated-stamp gudev-sharp.dll
@@ -41,11 +41,11 @@ gudev-sharp.dll: $(build_sources) generated-stamp gudev-sharp.snk
 	$(build_sources) $(GENERATED_SOURCES)
 
 install-data-local:
-	echo "$(GACUTIL) /i $(ASSEMBLY) /f /package gudev-sharp-1.0 /root $(DESTDIR)$(prefix)/lib";  \
-        $(GACUTIL) /i $(ASSEMBLY) /f /package gudev-sharp-1.0 /root $(DESTDIR)$(prefix)/lib || exit 1;
+	echo "$(GACUTIL) /i $(ASSEMBLY) /f /package gudev-sharp-3.0 /root $(DESTDIR)$(prefix)/lib";  \
+        $(GACUTIL) /i $(ASSEMBLY) /f /package gudev-sharp-3.0 /root $(DESTDIR)$(prefix)/lib || exit 1;
 
 uninstall-local:
-	echo "$(GACUTIL) /u $(ASSEMBLY_NAME) /package gudev-sharp-1.0 /root $(DESTDIR)$(libdir)"; \
-        $(GACUTIL) /u $(ASSEMBLY_NAME) /package gudev-sharp-1.0 /root $(DESTDIR)$(libdir) || exit 1;
+	echo "$(GACUTIL) /u $(ASSEMBLY_NAME) /package gudev-sharp-3.0 /root $(DESTDIR)$(libdir)"; \
+        $(GACUTIL) /u $(ASSEMBLY_NAME) /package gudev-sharp-3.0 /root $(DESTDIR)$(libdir) || exit 1;
 
 EXTRA_DIST = $(API) $(RAW_API) $(sources) $(customs) $(METADATA) AssemblyInfo.cs.in gudev-sharp.dll.config.in

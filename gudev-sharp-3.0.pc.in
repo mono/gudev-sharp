@@ -1,7 +1,7 @@
 prefix=@prefix@
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
-Libraries=${libdir}/mono/gudev-sharp-1.0/gudev-sharp.dll
+Libraries=${libdir}/mono/gudev-sharp-3.0/gudev-sharp.dll
 
 Name: GUdev#
 Description: GUdev# - A Gtk# GUdev binding

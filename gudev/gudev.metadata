@@ -1,6 +1,14 @@
 <?xml version="1.0" ?>
 <metadata>
   <attr path="/api/namespace/object/constructor[@cname='g_udev_client_new']/parameters/parameter" name="type">GStrv</attr>
+  <attr path="/api/namespace/object/method[@cname='g_udev_client_query_by_device_number']/return-type" name="owned">true</attr>
+  <attr path="/api/namespace/object/method[@cname='g_udev_client_query_by_device_file']/return-type" name="owned">true</attr>
+  <attr path="/api/namespace/object/method[@cname='g_udev_client_query_by_subsystem']/return-type" name="element_type">GUdevDevice*</attr>
+  <attr path="/api/namespace/object/method[@cname='g_udev_client_query_by_subsystem']/return-type" name="owned">true</attr>
+  <attr path="/api/namespace/object/method[@cname='g_udev_client_query_by_subsystem']/return-type" name="elements_owned">true</attr>
+  <attr path="/api/namespace/object/method[@cname='g_udev_client_query_by_subsystem_and_name']/return-type" name="owned">true</attr>
+  <attr path="/api/namespace/object/method[@cname='g_udev_client_query_by_sysfs_path']/return-type" name="owned">true</attr>
+  <attr path="/api/namespace/object/method[@cname='g_udev_device_get_property']" name="new_flag">1</attr>
   <attr path="/api/namespace/object/method[@cname='g_udev_device_get_property_keys']/return-type" name="type">GStrv</attr>
   <attr path="/api/namespace/object/method[@cname='g_udev_device_get_property_as_strv']/return-type" name="type">GStrv</attr>
   <attr path="/api/namespace/object/method[@cname='g_udev_device_get_sysfs_attr_as_strv']/return-type" name="type">GStrv</attr>

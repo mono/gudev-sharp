@@ -31,13 +31,13 @@ $(API): $(srcdir)/$(RAW_API) $(srcdir)/$(METADATA)
 	$(FIXUP) --api=$(srcdir)/$(API) --metadata=$(srcdir)/$(METADATA)
 
 generated-stamp: $(API)
-	 $(CODEGEN) --generate $(srcdir)/$(API) $(GTK_SHARP_CFLAGS) --outdir=generated --customdir=$(srcdir) --assembly-name=gudev-sharp && touch generated-stamp
+	 $(CODEGEN) --generate $(srcdir)/$(API) $(GLIB_SHARP_CFLAGS) --outdir=generated --customdir=$(srcdir) --assembly-name=gudev-sharp && touch generated-stamp
 
 gudev-sharp.snk: $(top_srcdir)/gudev-sharp.snk
 	cp $(top_srcdir)/gudev-sharp.snk .
 
 gudev-sharp.dll: $(build_sources) generated-stamp gudev-sharp.snk
-	$(CSC) -out:gudev-sharp.dll -unsafe -target:library $(GTK_SHARP_LIBS) \
+	$(CSC) -out:gudev-sharp.dll -unsafe -target:library $(GLIB_SHARP_LIBS) \
 	$(build_sources) $(GENERATED_SOURCES)
 
 install-data-local:

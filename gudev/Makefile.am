@@ -31,7 +31,7 @@ $(API): $(srcdir)/$(RAW_API) $(srcdir)/$(METADATA)
 	$(FIXUP) --api=$(srcdir)/$(API) --metadata=$(srcdir)/$(METADATA)
 
 generated-stamp: $(API)
-	 $(CODEGEN) --generate $(srcdir)/$(API) $(GLIB_SHARP_CFLAGS) --outdir=generated --customdir=$(srcdir) --assembly-name=gudev-sharp && touch generated-stamp
+	 $(CODEGEN) --generate $(srcdir)/$(API) $(GLIB_SHARP_CFLAGS) --outdir=generated --assembly-name=gudev-sharp && touch generated-stamp
 
 gudev-sharp.snk: $(top_srcdir)/gudev-sharp.snk
 	cp $(top_srcdir)/gudev-sharp.snk .

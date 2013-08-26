@@ -2,8 +2,9 @@ RAW_API=gudev-api.raw
 API=gudev-api.xml
 METADATA=gudev.metadata
 
-ASSEMBLY_NAME= gudev-sharp
-ASSEMBLY= $(ASSEMBLY_NAME).dll
+ASSEMBLY_NAME = gudev-sharp
+ASSEMBLY = $(ASSEMBLY_NAME).dll
+SNK = $(top_srcdir)/$(ASSEMBLY_NAME).snk
 
 CODEGEN=gapi3-codegen
 FIXUP=gapi3-fixup
@@ -33,12 +34,8 @@ $(API): $(srcdir)/$(RAW_API) $(srcdir)/$(METADATA)
 generated-stamp: $(API)
 	 $(CODEGEN) --generate $(srcdir)/$(API) $(GLIB_SHARP_CFLAGS) --outdir=generated --assembly-name=gudev-sharp && touch generated-stamp
 
-gudev-sharp.snk: $(top_srcdir)/gudev-sharp.snk
-	cp $(top_srcdir)/gudev-sharp.snk .
-
-gudev-sharp.dll: $(build_sources) generated-stamp gudev-sharp.snk
-	$(CSC) -out:gudev-sharp.dll -unsafe -target:library $(GLIB_SHARP_LIBS) \
-	$(build_sources) $(GENERATED_SOURCES)
+$(ASSEMBLY): $(build_sources) $(SNK) generated-stamp
+	$(CSC) -keyfile:$(SNK) -out:gudev-sharp.dll -unsafe -target:library $(GLIB_SHARP_LIBS) $(build_sources) $(GENERATED_SOURCES)
 
 install-data-local:
 	echo "$(GACUTIL) /i $(ASSEMBLY) /f /package gudev-sharp-3.0 /root $(DESTDIR)$(prefix)/lib";  \

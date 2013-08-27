@@ -1,0 +1,3 @@
+GUdev# is a .NET binding to gudev
+
+This allows access to device information from a C# program using Mono on Linux.

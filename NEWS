@@ -1,6 +1,15 @@
 GUdev#
 A mono binding to libgudev.
 
+========================
+Version 3.0 - 2013-08-27
+========================
+
+This version depends on glib-sharp 2.99 and above, and can be installed in
+parallel with version 0.1.
+As a consequence, the assembly and the pkgconfig file are now named gudev-sharp-3.0
+
+
 =============
 Version 0.1
 =============

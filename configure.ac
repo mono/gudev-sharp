@@ -1,4 +1,4 @@
-AC_INIT(gudev-sharp, 0.2)
+AC_INIT(gudev-sharp, 3.0)
 AM_INIT_AUTOMAKE([foreign])
 AM_MAINTAINER_MODE
 
